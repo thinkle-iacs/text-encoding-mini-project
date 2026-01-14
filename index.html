@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encoding Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Encoding/Decoding Tool</h1>
+        
+        <div class="three-column-layout">
+            <!-- Column 1: Input -->
+            <div class="column input-column">
+                <h2>Input Text</h2>
+                <div class="button-group">
+                    <button class="insert-btn" data-text="shakespeare">Shakespeare Sonnet</button>
+                    <button class="insert-btn" data-text="lorem">Lorem Ipsum</button>
+                    <button class="insert-btn" data-text="alphabet">Alphabet</button>
+                    <button class="insert-btn" data-text="numbers">Numbers</button>
+                </div>
+                <textarea id="inputText" class="text-area" placeholder="Enter text here..."></textarea>
+                <div class="char-count">
+                    Character Length: <span id="inputCharCount">0</span>
+                </div>
+            </div>
+
+            <!-- Column 2: Controls -->
+            <div class="column control-column">
+                <h2>Encoding</h2>
+                <div class="control-group">
+                    <label for="schemeSelect">Scheme:</label>
+                    <select id="schemeSelect">
+                        <option value="base64">Base64</option>
+                        <option value="hex">Hexadecimal</option>
+                        <option value="binary">Binary</option>
+                        <option value="url">URL Encoding</option>
+                        <option value="rot13">ROT13</option>
+                    </select>
+                </div>
+                <div class="button-group-vertical">
+                    <button id="encodeBtn" class="action-btn">Encode</button>
+                    <button id="decodeBtn" class="action-btn">Decode</button>
+                </div>
+            </div>
+
+            <!-- Column 3: Output -->
+            <div class="column output-column">
+                <h2>Result</h2>
+                <textarea id="outputText" class="text-area" readonly placeholder="Result will appear here..."></textarea>
+                <div class="char-count">
+                    Text Length: <span id="outputCharCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
